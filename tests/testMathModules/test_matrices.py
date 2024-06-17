@@ -1,4 +1,4 @@
-from libia.mathModules.matrices import cov_matrice
+from libia.mathModules.matrices import calculate_covariance_matrix
 
 def test_cov_matrice():
     m = [
@@ -9,4 +9,4 @@ def test_cov_matrice():
         [8 / 3, 2/3],
         [2/3, 2/3]
     ]
-    assert cov_matrice(m) == expected
+    assert calculate_covariance_matrix(m) == expected

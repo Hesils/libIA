@@ -1,6 +1,12 @@
 from statistics import mean
 
-def cov_matrice(m: list[list[float]]) -> list[list[float]]:
+def add_matrix(a: list[list[float]], b: list[list[float]]) -> list[list[float]]:
+    matrix = []
+    for va, vb in zip(a, b):
+        matrix.append([vva + vvb for vva, vvb in zip(va, vb)])
+    return matrix
+
+def calculate_covariance_matrix(m: list[list[float]]) -> list[list[float]]:
     # Covariance entre deux variables: mean(ab) - (mean(a)*mean(b))
     # Pour deux vecteurs, mean(ab) = mean(sum([x for x in v]))
     # Pour deux vecteurs, mean(v) = mean(sum([v]))²
